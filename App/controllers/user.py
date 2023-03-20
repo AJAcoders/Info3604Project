@@ -1,9 +1,7 @@
 from App.models import User, Role
 from flask_sqlalchemy import SQLAlchemy
 from App.database import db
-from flask_user import login_required, UserManager, UserMixin
-
-
+from flask_user import current_user, login_required, roles_required, UserManager, UserMixin
 
 def createAdmin():
     user = get_user_by_username('Admin')
